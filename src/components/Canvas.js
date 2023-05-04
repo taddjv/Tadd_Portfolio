@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Float, OrbitControls, Html } from "@react-three/drei";
 import {
@@ -18,13 +18,17 @@ import Background from "./BackgroundStars";
 import CameraFrame from "./CameraFrame";
 
 const CanvasRender = () => {
-  const { location, setLocation } = useGeneral();
+  const { location, setLocation, setReady } = useGeneral();
+  // useEffect(() => {
+  //   setReady(true);
+  // }, []);
   return (
     <Canvas
       width={window.innerWidth}
       height={window.innerHeight}
       camera={{ fov: 75, position: [0.5, 0, 0] }}
       style={{ zIndex: 1 }}
+      onLoad={() => setReady(true)}
     >
       <Background />
 
