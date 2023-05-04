@@ -11,7 +11,7 @@ import LoadScreen from "./components/LoadScreen";
 import CanvasRender from "./components/Canvas";
 import { useEffect, useState } from "react";
 function App() {
-  const { location, setLocation } = useGeneral();
+  const { location, ready } = useGeneral();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-    <LoadScreen />
+      <LoadScreen />
       {!loading && <>{location === "center" && <CTitle />}</>}
       <ContactForm />
       <AboutMe />
