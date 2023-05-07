@@ -11,7 +11,6 @@ const AboutMe = () => {
 
   const thing = useSpring({
     top: location === "down" ? "0" : "100vh",
-    // top: location === "center" ? "0" : "-100vh",
     config: {
       mass: 5,
       tension: 400,

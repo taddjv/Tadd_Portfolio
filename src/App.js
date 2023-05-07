@@ -9,9 +9,15 @@ import AboutMe from "./components/About/AboutMe";
 import Skills from "./components/Skill/Skills";
 import LoadScreen from "./components/LoadScreen";
 import CanvasRender from "./components/Canvas";
+import { useEffect } from "react";
 
 function App() {
-  const { location, ready } = useGeneral();
+  const { location, ready, setReady } = useGeneral();
+  useEffect(() => {
+    setTimeout(() => {
+      setReady(true);
+    }, 1500);
+  }, []);
 
   return (
     <>
