@@ -6,7 +6,7 @@ const LoadScreen = () => {
   const { ready } = useGeneral();
   useEffect(() => {
     const doc = document.querySelector(".load-conatainer");
-    const text = document.querySelector("load-text-2");
+    const text = document.querySelector(".load-text-2");
     if (ready) {
       setTimeout(() => {
         doc.style.filter = "blur(100px)";
@@ -15,11 +15,11 @@ const LoadScreen = () => {
       setTimeout(() => {
         doc.style.display = "none";
       }, 1500);
-      if (text) {
-        setTimeout(() => {
-          text.style.color = "rgba(0, 0, 0, 1)";
-        }, 5000);
-      }
+    }
+    if (text) {
+      setTimeout(() => {
+        text.style.color = "rgba(0, 0, 0, 1)";
+      }, 6000);
     }
   });
   return (

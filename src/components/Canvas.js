@@ -19,7 +19,11 @@ import CameraFrame from "./CameraFrame";
 
 const CanvasRender = () => {
   const { location, setLocation, setReady } = useGeneral();
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setReady(true);
+  //   }, 500);
+  // });
   return (
     <Canvas
       width={window.innerWidth}

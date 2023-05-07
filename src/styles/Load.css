@@ -22,7 +22,8 @@ font-size: 44px;
 }
 .load-text-2{
 font-size: 44px;
-color:rgba(0, 0, 0, 0)
+color:rgba(0, 0, 0, 0);
+transition: all 250ms ease-in;
 }
 .load-bar{
     width:25%;
