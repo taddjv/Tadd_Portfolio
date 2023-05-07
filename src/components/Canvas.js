@@ -19,16 +19,17 @@ import CameraFrame from "./CameraFrame";
 
 const CanvasRender = () => {
   const { location, setLocation, setReady } = useGeneral();
-  // useEffect(() => {
-  //   setReady(true);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setReady(true);
+    }, 1000);
+  }, []);
   return (
     <Canvas
       width={window.innerWidth}
       height={window.innerHeight}
       camera={{ fov: 75, position: [0.5, 0, 0] }}
       style={{ zIndex: 1 }}
-      onLoad={() => setReady(true)}
     >
       <Background />
 

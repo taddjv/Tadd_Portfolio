@@ -4,7 +4,7 @@ import { OrbitControls, PresentationControls } from "@react-three/drei";
 import { NController } from "./NController";
 import Text from "./text";
 import { useGeneral } from "../../context";
-
+import CTitle from "./CTitle";
 
 const ControllerRender = () => {
   const { location } = useGeneral();
@@ -17,7 +17,6 @@ const ControllerRender = () => {
 
   return (
     <>
-      
       <pointLight position={[1, 1, 3]} intensity={1} />
       <pointLight position={[1, 0, 0]} intensity={0.1} />
       <pointLight position={[1, 1, 3]} intensity={1} />

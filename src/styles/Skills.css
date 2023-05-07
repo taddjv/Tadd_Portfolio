@@ -27,8 +27,8 @@
 
 }
 .skill:hover {
-    width:140px;
-    height:140px;
+    width:84px;
+    height:84px;
     background: rgba(255,255,255,0.5);
     border: 2px solid rgba(255,255,255,0.5);
     box-shadow: 16px 14px 20px #0000008c,

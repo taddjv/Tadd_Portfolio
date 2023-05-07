@@ -6,10 +6,20 @@ const LoadScreen = () => {
   const { ready } = useGeneral();
   useEffect(() => {
     const doc = document.querySelector(".load-conatainer");
+    const text = document.querySelector("load-text-2");
     if (ready) {
       setTimeout(() => {
-        doc.style.display = "none";
+        doc.style.filter = "blur(100px)";
+        doc.style.background = "rgba(199, 199, 199, 0)";
       }, 500);
+      setTimeout(() => {
+        doc.style.display = "none";
+      }, 1500);
+      if (text) {
+        setTimeout(() => {
+          text.style.color = "rgba(0, 0, 0, 1)";
+        }, 5000);
+      }
     }
   });
   return (
@@ -17,6 +27,9 @@ const LoadScreen = () => {
       <div className="load-text">Loading...</div>
       <div className="load-bar">
         <div className="l-b-porgress"></div>
+      </div>
+      <div className="load-text-2">
+        This is taking a while... I'm sorry about that
       </div>
     </div>
   );

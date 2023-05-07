@@ -9,20 +9,15 @@ import AboutMe from "./components/About/AboutMe";
 import Skills from "./components/Skill/Skills";
 import LoadScreen from "./components/LoadScreen";
 import CanvasRender from "./components/Canvas";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 function App() {
   const { location, ready } = useGeneral();
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-  });
+  useEffect(() => {});
 
   return (
     <>
       <LoadScreen />
-      {!loading && <>{location === "center" && <CTitle />}</>}
+      {ready && <>{location === "center" && <CTitle />}</>}
       <ContactForm />
       <AboutMe />
       <Projects />

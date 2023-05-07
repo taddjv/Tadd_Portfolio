@@ -38,6 +38,13 @@ const ContactForm = () => {
           form.current.subject = "";
           form.current.email = "";
           form.current.message = "";
+        })
+        .catch(() => {
+          setLocation("center");
+          form.current.name = "";
+          form.current.subject = "";
+          form.current.email = "";
+          form.current.message = "";
         });
     } else {
       setErrors(emailCheck(form.current).errors);

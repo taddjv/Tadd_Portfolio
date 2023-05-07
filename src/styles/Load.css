@@ -12,11 +12,17 @@
     top:0;
     left:0;
     z-index: 10;
-    animation: blur 1s forwards;
+    filter:blur(0px);
+    background: rgba(199, 199, 199, 1);
+    transition: all 1s ease-in;
     animation-delay: 3s;
 }
 .load-text{
 font-size: 44px;
+}
+.load-text-2{
+font-size: 44px;
+color:rgba(0, 0, 0, 0)
 }
 .load-bar{
     width:25%;
@@ -37,7 +43,7 @@ font-size: 44px;
         width:100%
     }
 }
-@keyframes blur{
+/* @keyframes blur{
     0%{
         filter:blur(0px);
         background: rgba(199, 199, 199, 1);
@@ -46,4 +52,4 @@ font-size: 44px;
         filter:blur(100px);
         background: rgba(199, 199, 199, 0);
     }
-}
+} */
